@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Build Push App') {
             steps {
-                echo 'App push done'
+               sh "mvn clean install"
             }
         }
          stage('Deploy') {
