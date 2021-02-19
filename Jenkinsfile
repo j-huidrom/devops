@@ -26,19 +26,19 @@ pipeline {
 	    }
         }
 	stage('Build Push App with mvn configured in jenknins') {
-		withMaven(
-			// Maven installation declared in the Jenkins "Global Tool Configuration"
-			maven: 'maven_3.6.3'
-		    ) {
-		      // Run the maven build
-		      sh "mvn clean install"
+		
+		 steps {
+				withMaven(
+				// Maven installation declared in the Jenkins "Global Tool Configuration"
+				maven: 'maven_3.6.3'
+			    ) {
+			      // Run the maven build
+			      sh "mvn clean install"
 
-		    }
-        }    
-	    
-	     
-	    
-	    
+			    }
+		    }	
+		
+        }        
 	    
 	    
          stage('Deploy') {
