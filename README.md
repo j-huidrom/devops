@@ -1,4 +1,4 @@
-After the huge response and viewership for my earlier article https://dzone.com/articles/spring-boot-restful-web-service-example I have decided to write a new article with all the REST calls example respectively GET, POST, PUT and DELETE. 
+After the something something  huge response and viewership for my earlier article https://dzone.com/articles/spring-boot-restful-web-service-example I have decided to write a new article with all the REST calls example respectively GET, POST, PUT and DELETE. 
 
 Prerequisites for this project:
 
