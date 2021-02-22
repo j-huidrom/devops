@@ -27,6 +27,7 @@ pipeline {
         }
         stage('Security Check') {
             steps {
+		dependencyCheck additionalArguments: '--scan=. --format=html', odcInstallation: 'OWASP-Dependency-Check'
                 echo 'All security checks done'
             }
         }
