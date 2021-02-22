@@ -39,7 +39,7 @@ pipeline {
 	    
          stage('Deploy') {
             steps {
-                sh "ps | grep java-fullstack | awk '{print $1}' | xargs kill -9 || true"
+                sh "fuser -k 8083/tcp"
 		sh "JENKINS_NODE_COOKIE=dontKillMe nohup java -jar ./target/spring-boot-rest-2-0.0.1-SNAPSHOT.jar &"
                 echo 'Deployment done'
             }
