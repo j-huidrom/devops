@@ -1,0 +1,86 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Student_Api",
+		"_postman_id": "56186854-6d90-6367-81ae-d3e5814cbbc2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://vlmazjuly19.fisdev.local:8083/register/student",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\" : \"Manoj\",\r\n\"age\" : \"23\",\r\n\"registrationNumber\": \"123345\" }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://vlmazjuly19.fisdev.local:8083/student/allstudent",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Request",
+			"request": {
+				"url": "http://vlmazjuly19.fisdev.local:8083/delete/student/",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Put Request",
+			"request": {
+				"url": "http://vlmazjuly19.fisdev.local:8083/update/student/",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
